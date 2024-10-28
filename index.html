@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
             background-color: #000;
             color: #ffffff;
             text-align: center;
+            overflow-y: auto; /* Mengizinkan scroll vertikal */
         }
 
         h1,
@@ -27,26 +29,39 @@
             margin-bottom: 1em;
         }
 
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            overflow: hidden;
+        }
+
         img {
             margin: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         img:hover {
-            transform: scale(1.1); 
+            transform: scale(1.1);
             box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
         }
 
         .container {
-            background-color: #490404d3;
+            background-color: rgba(73, 4, 4, 0.616);
             margin: 30px auto;
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
             width: 80%;
             max-width: 600px;
+            position: relative;
+            z-index: 1;
         }
 
         .profile-info {
@@ -67,43 +82,40 @@
 </head>
 
 <body>
+    <video class="video-background" autoplay loop muted>
+        <source src="853848-hd_1920_1080_25fps.mp4" type="video/mp4">
+    </video>
+
     <div class="container">
         <h1>My Profile</h1>
         <a href="https://www.instagram.com/rahapp._/" target="_blank">
-            <img src="WhatsApp Image 2024-10-26 at 20.24.52_7f76a1a0.jpg" width="300" height="400"
-                alt="Profile Picture">
-
+            <img src="WhatsApp Image 2024-10-26 at 20.24.52_7f76a1a0.jpg" width="300" height="400" alt="Profile Picture">
         </a>
 
         <div class="profile-info">
-            <p><strong>Name:</strong> Raihan akbar putra prasetyo</p>
+            <p><strong>Name:</strong> Raihan Akbar Putra Prasetyo</p>
             <p><strong>Surname:</strong> Raihan/Buje</p>
             <p><strong>Hobby:</strong> Football</p>
             <p><strong>Birth:</strong> 20 April 2006</p>
             <p><strong>Place of Birth:</strong> Ponorogo</p>
-            <p><strong>Address:</strong> Puri cempaka putih 1 R.14 KEDUNGKANDANG,MALANG</p>
-            <p><strong>Job:</strong> Student in State Polytechnic of Malang</p>
+            <p><strong>Address:</strong> Puri Cempaka Putih 1 R.14 KEDUNGKANDANG, MALANG</p>
+            <p><strong>Job:</strong> Student at State Polytechnic of Malang</p>
         </div>
 
         <h2>THIS IS MY PRIDE</h2>
         <a href="https://www.liverpoolfc.com/id" target="_blank">
             <img src="7b8f4d5f8eb40dfdf53804acce150a04_1.jpg" width="300" alt="Liverpool FC">
-
         </a>
         <p>IS LIVERPOOL FC MY FAVORITE FOOTBALL TEAM</p>
         <a href="https://www.ferrari.com/en-ID" target="_blank">
             <img src="Ferarri.jpg" width="300" alt="Ferrari">
-
         </a>
         <p>IS FERRARI MY FAVORITE CAR IN F1</p>
         <a href="https://www.ducati.com/us/en/racing/ducati-corse" target="_blank">
             <img src="Marc-ducati.jpg" width="300" alt="Marc Marquez">
-
         </a>
-        <p>IS MARQ MARQUEZ MY FAVORITE RIDER IN MOTO GP AND DUCATI IS MY FAVORITE BIKE</p>
+        <p>IS MARC MARQUEZ MY FAVORITE RIDER IN MOTO GP AND DUCATI IS MY FAVORITE BIKE</p>
     </div>
-
-   
 </body>
 
 </html>
